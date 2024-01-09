@@ -69,12 +69,8 @@ namespace chot
 
         private void button4_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-MFFBE7H\\SQL2022;Initial Catalog=qlbanhang;Integrated Security=True");
             DataTable dt = new DataTable();
-            string sql = " select chitiethd.mahang, tenhang, dvtinh,slban, giaban from chitiethd,hang, hoadon where chitiethd.mahang=hang.mahang and chitiethd.sohd=hoadon.sohd and year(ngaylap)=(2023)";
-
-            SqlDataAdapter ad = new SqlDataAdapter(sql, conn);
-            ad.Fill(dt);
+        
             dataGridView1.DataSource = dt;
 
 
