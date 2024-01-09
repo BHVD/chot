@@ -140,6 +140,10 @@ namespace chot
             MessageBox.Show("Xuất file Excel thành công!");
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
