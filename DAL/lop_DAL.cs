@@ -13,23 +13,23 @@ namespace DAL
         public lop_DAL() { }
         public DataTable Load_Lop()
         {
-            return Load_DL("select * from phieuthu");
+            return Load_DL("select * from hang");
         }
-        public void Insert_Lop(phieuthu ob)
+        public void Insert_Lop(Hang ob)
         {
-            string sql = "insert into phieuthu values('" +
-    ob.sopt + "','" + ob.ngaythu + "','" + ob.makh + "','" + ob.sotien + "')";
+            string sql = "insert into hang values('" +
+                ob.maHang + "','" + ob.tenHang + "','" + ob.quyCach + "','" + ob.dvTinh + "')";
             Excecute(sql);
         }
-        public void Update_Lop(phieuthu ob)
+        public void Update_Lop(Hang ob)
         {
-            string sql = "update phieuthu set sopt= N'" + ob.sopt + "', sotien = '" + ob.sotien + "'" +
-    "where makh='" + ob.makh + "'";
+            string sql = "update hang set tenhang= '" + ob.tenHang + "', quycach = '" + ob.quyCach + "', dvtinh ='" +ob.dvTinh+"' "+
+    "where mahang='" + ob.maHang + "'";
             Excecute(sql);
         }
-        public void Delete_Lop(string makh)
+        public void Delete_Lop(string mah)
         {
-            string sql = "delete from phieuthu where makh='" + makh + "'";
+            string sql = "delete from hang where mahang='" + mah + "'";
             Excecute(sql);
         }
 

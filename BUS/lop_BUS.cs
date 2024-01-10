@@ -18,13 +18,13 @@ namespace BUS
         {
             return phieuthu.Load_Lop();
         }
-        public void Insert_Bus(phieuthu ob)
+        public void Insert_Bus(Hang ob)
         {
 
             phieuthu.Insert_Lop(ob);
         }
 
-        public void Update_Bus(phieuthu ob)
+        public void Update_Bus(Hang ob)
         {
             phieuthu.Update_Lop(ob);
         }
